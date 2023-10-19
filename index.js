@@ -1,13 +1,29 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+  //The function takes an array, iterates through elents to find two number,
+  //whose sum is equal to target
+  //if two numbers are found return true
+  //return false if not found
 
+  for (let i = 0; i < array.length; i++) {
+
+    const complement = target - array[i];
+
+    for (let j = i + 1; j < array.length; j++) {
+
+      if (array[j] === complement) return true;
+    }
+  }
+  return false;
+}
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
   Add your pseudocode here
+
+  The function takes an array, iterates through elents to find two number,
+    check number for complement
 */
 
 /*
